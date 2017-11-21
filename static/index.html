@@ -20,10 +20,11 @@
       <td class="field time"><i class="fa fa-clock-o" aria-hidden="true"></i><small>Time</small></td>
       <td class="field caption"><i class="fa fa-comment-o" aria-hidden="true"></i><small>Caption</small></td>
       <td class="field likes"><i class="fa fa-heart-o" aria-hidden="true"></i><small>Likes</small></td>
+      <td class="field likes"><i class="fa fa-user-plus" aria-hidden="true"></i><small>New Likers</small></td>
       <td class="field comments"><i class="fa fa-comments-o" aria-hidden="true"></i><small>Comments</small></td>
       <td class="field tags"><i class="fa fa-hashtag" aria-hidden="true"></i><small>Hashtags</small></td>
     </tr>
-    <tr class="row" data-ng-repeat="item in instaData">
+    <tr class="row" data-ng-repeat="item in posts">
       <td class="field photo"><a data-ng-href="{{ item.link }}" target="_blank"><img data-ng-src="{{ item.images.thumbnail.url }}"></a></td>
       <td class="field date">
         <p>{{ item.created_time * 1000 | date: 'MM/dd/yy' }}</p>
@@ -36,6 +37,9 @@
       </td>
       <td class="field likes">
         <p>{{ item.likes.count }}</p>
+      </td>
+      <td class="field likes">
+        <p>??</p>
       </td>
       <td class="field comments">
         <p>{{ item.comments.count }}</p>

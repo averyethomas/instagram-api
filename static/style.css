@@ -203,7 +203,7 @@ small {
       .dashboard-table .row .field.caption {
         width: 150px; }
       .dashboard-table .row .field.likes, .dashboard-table .row .field.comments {
-        width: 60px;
+        width: 70px;
         text-align: center; }
       .dashboard-table .row .field.tags {
         width: 100px; }
@@ -219,7 +219,7 @@ small {
           margin: 0 auto; }
 
 footer {
-  margin: 2rem 0 0;
+  margin: 5rem 0 0;
   padding: 1rem 0;
   text-align: center;
   background-color: rgba(86, 160, 211, 0.5); }

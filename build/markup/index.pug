@@ -20,13 +20,16 @@ div.container
             td.field.likes
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 small Likes
+            td.field.likes
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                small New Likers
             td.field.comments
                 <i class="fa fa-comments-o" aria-hidden="true"></i>
                 small Comments
             td.field.tags
                 <i class="fa fa-hashtag" aria-hidden="true"></i>
                 small Hashtags
-        tr.row(data-ng-repeat='item in instaData')
+        tr.row(data-ng-repeat='item in posts')
             td.field.photo
                 a(data-ng-href='{{ item.link }}' target='_blank')
                     img(data-ng-src='{{ item.images.thumbnail.url }}')
@@ -38,6 +41,8 @@ div.container
                 p {{ item.caption.text }}
             td.field.likes
                 p {{ item.likes.count }}
+            td.field.likes
+                p ??
             td.field.comments
                 p {{ item.comments.count }}
             td.field.tags
