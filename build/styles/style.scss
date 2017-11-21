@@ -1,0 +1,86 @@
+@import "base-files/base";
+
+.dashboard-table{
+  margin: 0 auto;
+  .row{
+    border-bottom: 0.2rem solid rgba($primary, 0.3);
+    margin: 5px 0;
+    
+    &:first-of-type{
+      border-top: 0.2rem solid rgba($primary, 0.3);
+      background-color: rgba($highlight, 0.2);
+      
+      .field{
+        padding: 5px;
+        vertical-align: bottom;
+        
+        .fa{
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          display: block;
+          text-align: center;
+          margin: 0 0 0.5rem;
+        }
+        small{
+          margin: 0;
+          display: block;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+    
+    .field{
+      padding: 7px 5px;
+      vertical-align: top;
+      
+      &.photo{
+        width: 50px;
+        text-align: center;
+      }
+      &.date, &.time{
+        width: 70px;
+        text-align: center;
+      }
+      &.caption{
+        width: 150px;
+      }
+      &.likes, &.comments{
+        width: 60px;
+        text-align: center;
+      }
+      &.tags{
+        width: 100px;
+      }
+      p{
+        margin: 0;
+      }
+      a{
+        display: block;
+        
+        &:hover{
+          img{
+            opacity: 0.5;
+          }
+        }
+        
+        img{
+          width: 40px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  margin: 2rem 0 0;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: rgba($highlight, 0.5);
+  
+  small{
+    color: $white;
+  }
+}

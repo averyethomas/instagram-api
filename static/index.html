@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html></html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--STYLES-->
+<link href="style.css" rel="stylesheet" type="text/css">
+<!--JAVASCRIPT-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="https://use.fontawesome.com/879fcc8444.js"></script>
+</head>
+<body data-ng-app='angularApp'>
+<div class="container">
+  <h1>Instagram Data</h1>
+  <h4>@averyethomas</h4>
+  <table class="dashboard-table" data-ng-controller="instaCtrl">
+    <tr class="row">
+      <td class="field photo"><i class="fa fa-camera" aria-hidden="true"></i><small>Photo</small></td>
+      <td class="field date"><i class="fa fa-calendar-o" aria-hidden="true"></i><small>Date</small></td>
+      <td class="field time"><i class="fa fa-clock-o" aria-hidden="true"></i><small>Time</small></td>
+      <td class="field caption"><i class="fa fa-comment-o" aria-hidden="true"></i><small>Caption</small></td>
+      <td class="field likes"><i class="fa fa-heart-o" aria-hidden="true"></i><small>Likes</small></td>
+      <td class="field comments"><i class="fa fa-comments-o" aria-hidden="true"></i><small>Comments</small></td>
+      <td class="field tags"><i class="fa fa-hashtag" aria-hidden="true"></i><small>Hashtags</small></td>
+    </tr>
+    <tr class="row" data-ng-repeat="item in instaData">
+      <td class="field photo"><a data-ng-href="{{ item.link }}" target="_blank"><img data-ng-src="{{ item.images.thumbnail.url }}"></a></td>
+      <td class="field date">
+        <p>{{ item.created_time * 1000 | date: 'MM/dd/yy' }}</p>
+      </td>
+      <td class="field time">
+        <p>{{ item.created_time * 1000 | date: 'hh:mm a' }}</p>
+      </td>
+      <td class="field caption">
+        <p>{{ item.caption.text }}</p>
+      </td>
+      <td class="field likes">
+        <p>{{ item.likes.count }}</p>
+      </td>
+      <td class="field comments">
+        <p>{{ item.comments.count }}</p>
+      </td>
+      <td class="field tags"><a data-ng-href="https://www.instagram.com/explore/tags/{{ tag }}" target="_blank" data-ng-repeat="tag in item.tags"> &#x23;{{ tag }}       </a>
+        <p><span class="italic">Total: {{ item.tags.length }}</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<footer>
+  <div class="container"><small>&copy; 2017, Avery Thomas.</small></div>
+</footer></body>

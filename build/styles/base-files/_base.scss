@@ -1,0 +1,140 @@
+@import "base-files/reset";
+
+//COLOR PALETTE
+$black: #000000;
+$white: #ffffff;
+$blue: #1a283c;
+$primary: #4F5257;
+$highlight: #56a0d3;
+$orange: #FF850E;
+
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+$sansSerif: 'Source Sans Pro', sans-serif;
+
+html{
+  font-size: 10px;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, small {
+  font-family: $sansSerif;
+  padding: 0;
+  margin: .5rem 0 2rem 0;
+  color: $primary;
+}
+h1 {
+  font-family: $sansSerif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5.5rem;
+  color: $blue;
+  text-transform: uppercase;
+  text-align: center;
+  margin: .5rem 0 1rem 0;
+}
+
+h2{
+  font-size: 3.5rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $blue;
+  padding: 0;
+  margin: 0.5rem 0 3.25rem;
+  position: relative;
+}
+
+h3 {
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 5px 0;
+  margin: 0.5rem 0 1rem;
+}
+
+h4 {
+  color: $highlight;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: 5px 0;
+  margin: 0.5rem 0 2rem;
+}
+
+h5{
+  font-family: $sansSerif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: $black;
+  margin: 0.5rem 0;
+}
+
+h6{
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  text-transform: uppercase;
+}
+
+p{
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.025rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 1rem;
+  b{
+      font-weight: 600;
+  }
+}
+span.italic {
+  font-family: $sansSerif;
+  color: $primary;
+  opacity: 0.5;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.025rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+a{
+  font-family: $sansSerif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  color: $highlight;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+}
+
+small{
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.container{
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
